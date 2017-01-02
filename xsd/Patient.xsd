@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- every schema has a targetNamespace, so all documents following this schema will have elements
+ from its targetNamespace -->
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.pankajshrivastava.com/Patient"
+        xmlns:tns="http://www.pankajshrivastava.com/Patient" elementFormDefault="qualified">
+
+    <!-- This is the root element for the patient xml documents -->
+    <!-- The xml is case-sensitive, so whatever element names are defined here should be used exactly the same
+     in the xml document-->
+
+    <element name="patient" type="tns:Patient"/>
+
+    <complexType name="Patient">
+        <sequence> <!-- sequence means elements should appear in same order in the xml document -->
+            <element name="id" type="tns:ID"/>
+            <element name="name" type="tns:string15Char"/>
+            <element name="age" type="int"/>
+            <element name="dob" type="date"/>
+            <element name="email" type="string"/>
+            <element name="gender" type="tns:Gender"/>
+            <element name="phone" type="string"/>
+        </sequence>
+    </complexType>
+
+    <simpleType name="ID">
+        <restriction base="int">
+            <pattern value="[0-9]*"></pattern>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="string15Char">
+        <restriction base="string">
+            <maxLength value="15"></maxLength>
+        </restriction>
+    </simpleType>
+    
+    <simpleType name="Gender">
+        <restriction base="string">
+            <enumeration value="M"></enumeration>
+            <enumeration value="F"></enumeration>
+        </restriction>
+    </simpleType>
+
+</schema>
