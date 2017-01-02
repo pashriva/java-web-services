@@ -14,7 +14,6 @@
 
     <complexType name="Patient">
         <sequence> <!-- sequence means elements should appear in same order in the xml document -->
-            <element name="id" type="tns:ID"/>
             <element name="name" type="tns:string15Char"/>
             <element name="age" type="int"/>
             <element name="dob" type="date"/>
@@ -23,6 +22,9 @@
             <element name="phone" type="string"/>
             <element name="paymentoption" type="tns:PaymentOption" maxOccurs="2"></element>
         </sequence>
+
+        <attribute name="id" type="tns:ID"/> <!-- attribute should always be defined after sequence, all or choice tags -->
+
     </complexType>
 
     <complexType name="PaymentOption">
