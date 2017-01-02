@@ -18,10 +18,10 @@
             <element name="name" type="tns:string15Char"/>
             <element name="age" type="int"/>
             <element name="dob" type="date"/>
-            <element name="email" type="string"/>
+            <element name="email" type="string" maxOccurs="unbounded" minOccurs="0"/>
             <element name="gender" type="tns:Gender"/>
             <element name="phone" type="string"/>
-            <element name="paymentoption" type="tns:PaymentOption"></element>
+            <element name="paymentoption" type="tns:PaymentOption" maxOccurs="2"></element>
         </sequence>
     </complexType>
 
@@ -33,7 +33,7 @@
     </complexType>
 
     <complexType name="cardtype">
-        <all>
+        <all> <!-- All means all should appear but in no specific order-->
             <element name="provider" type="string"></element>
             <element name="limit" type="string"></element>
         </all>
