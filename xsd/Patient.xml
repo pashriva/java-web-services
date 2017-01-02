@@ -1,6 +1,6 @@
 <pat:patient xmlns:pat="http://www.pankajshrivastava.com/Patient">
-  <pat:id>12</pat:id>
-  <pat:name>w</pat:name>
+  <pat:id>3</pat:id>
+  <pat:name>string</pat:name>
   <pat:age>3</pat:age>
   <pat:dob>2008-09-29</pat:dob>
   <pat:email>string</pat:email>
