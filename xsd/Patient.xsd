@@ -21,7 +21,7 @@
             <element name="email" type="string"/>
             <element name="gender" type="tns:Gender"/>
             <element name="phone" type="string"/>
-            <element name="paymentoption" type="tns:cardtype"></element>
+            <element name="paymentoption" type="tns:PaymentOption"></element>
         </sequence>
     </complexType>
 
