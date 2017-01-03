@@ -1,0 +1,4 @@
+<teac:teacher xmlns:teac="http://www.pankajshrivastava.com/Teacher_Student">
+  <teac:name>string</teac:name>
+  <teac:teacherId>string</teac:teacherId>
+</teac:teacher>
